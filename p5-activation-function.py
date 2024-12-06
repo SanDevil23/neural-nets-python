@@ -6,6 +6,8 @@ X = [[1,2,3,2.5],
     [2.0,5.0,-1.0,2.0],
     [-1.5,2.7,3.3,-0.8]]
 
+X,y = spiral.create_data(100,3)
+
 
 # inputs = [0,2,-1,3.3, -2.7, 1.1, 2.2, -100]
 
@@ -36,11 +38,22 @@ class Activation_ReLU:
         self.output = np.maximum(0, inputs)                     # implementing ReLU
 
 
-layer1 = Layer_Dense(4,5)
-layer2 = Layer_Dense(5,2)
+layer1 = Layer_Dense(2,5)
+# layer2 = Layer_Dense(5,2)
 
+activ_ReLU = Activation_ReLU()
+
+
+print("Before Activation Function")
 layer1.forward(X)
 print(layer1.output)
 
-layer2.forward(layer1.output)
-print(layer2.output)
+
+print("After Activation Function")
+activ_ReLU.forward(layer1.output)
+print(activ_ReLU.output)
+
+
+
+# layer2.forward(layer1.output)
+# print(layer2.output)
