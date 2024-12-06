@@ -12,7 +12,7 @@ echo "GOOD MORNING WORLD"
 elif [ $hour -le 16 ] # if hour is less than equal to 16
 then
 echo "GOOD AFTERNOON WORLD"
-elif [ $hour -le 20 ] # if hour is less than equal to 20
+elif [ $hour -le 19 ] # if hour is less than equal to 20
 then
 echo "GOOD EVENING WORLD"
 else
